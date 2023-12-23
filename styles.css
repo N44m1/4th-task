@@ -1,0 +1,49 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-bottom: 100px;
+    position: relative;
+    text-align: center;
+}
+
+.element-container {
+    display: grid;
+    grid-template-columns: repeat(3, calc(33.3333% - 13.3333px));
+    grid-template-rows: repeat(3, calc(33.3333% - 13.3333px));
+    grid-gap: 80px 30px;
+    width: 100%;
+    place-self: center;
+}
+
+@media screen and (max-width: 950px) {
+    .element-container {
+        display: grid;
+        grid-template-columns: repeat(2, calc(33.3333% - 13.3333px));
+        grid-template-rows: repeat(3, calc(33.333% - 13.3333px));
+        grid-gap: 80px 80px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .element-container {
+        display: grid;
+        grid-template-columns: repeat(1, calc(50% - 13.3333px));
+        grid-template-rows: repeat(6, calc(20% - 13.3333px));
+        row-gap: 10px;
+        width: 100%;
+    }
+
+}
+
+.element {
+    height: 250px;
+    width: 250px;
+    background: red;
+    place-self: center;
+    overflow: hidden;
+}
